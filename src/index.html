@@ -120,35 +120,101 @@
     </section>
     <section id="count_cost" class="container count_cost__container">
         <h2 class="count_cost__title">Подсчет стоимости</h2>
+        <form class="cost__form">
+            <select name="count_cost__select_type" placeholder="Тип работы" class="cost__form__select">
+                <option value="default" selected data-default>Тип работы ▿</option>
+                <option value="tilda">Сайты на Тильде</option>
+                <option value="web">Веб-дизайн</option>
+                <option value="code">Программный код</option>
+            </select>
+            <select name="count_cost__select_size" placeholder="Насколько большой проект" class="cost__form__select">
+                <option value="default" selected data-default>Насколько большой проект? ▿</option>
+                <option value="tilda">Сайты на Тильде</option>
+                <option value="web">Веб-дизайн</option>
+                <option value="code">Программный код</option>
+            </select>
+            <label><input type="checkbox" class="count_cost__input_checkbox"/>
+                Да, я слышал про осеннюю школу. <br>
+            Интересно а после нее будет егэ?</label>
+            <button onclick="toggle_cost()" type='button' class="cost__form__button">Рассчитать стоимость</button>
+        </form>
+        <div id="cost__answer" class="cost__answer cost__answer_visible">
+            <p class="cost__answer_title">Примерный подсчет:</p>
+            <div>
+                <p class="cost__answer_text">Стоимость</p>
+                <p class="cost__answer_price">От 120 000 ₽</p>
+            </div>
+            <div>
+                <p class="cost__answer_text">Примерные сроки</p>
+                <p class="cost__answer_price">14 рабочих дней</p>
+            </div>
+            <button class="cost__answer__button">Обсудить проект</button>
+        </div>
     </section>
     <section id="q&a" class="container qa__container">
         <h2>Вопрос-ответ</h2>
         <div class="qa__questions__container">
-            <div class="qa_question">Делаете только дизайн?</div>
-            <div class="qa_question">Почему Тильда</div>
-            <div class="qa_question">Какие сроки</div>
-            <div class="qa_question">Как происходит оплата?</div>
-            <div class="qa_question">Сколько правок можно внести</div>
-            <div class="qa_question">Работаете со срочными проектами?</div>
+            <div class="qa_question">
+                <p>Делаете только дизайн?</p>
+                <button onclick="toggle_answer(1)" id="qa_question__btn_1" class="qa_question_button">+</button>
+                <div id="qa_questions_1" class="qa__question_answer">
+                    Какой-то очень интересный текст для проверки работоспособности этого блока. Я надеюсь, что он будет нормально отображаться при клике
+                </div>
+            </div>
+            <div class="qa_question">
+                <p>Почему Тильда</p>
+                <button onclick="toggle_answer(2)" id="qa_question__btn_2" class="qa_question_button">+</button>
+                <div id="qa_questions_2" class="qa__question_answer">
+                    Какой-то очень интересный текст для проверки работоспособности этого блока. Я надеюсь, что он будет нормально отображаться при клике
+                </div>
+            </div>
+            <div class="qa_question">
+                <p>Какие сроки</p>
+                <button onclick="toggle_answer(3)" id="qa_question__btn_3" class="qa_question_button">+</button>
+                <div id="qa_questions_3" class="qa__question_answer">
+                    Какой-то очень интересный текст для проверки работоспособности этого блока. Я надеюсь, что он будет нормально отображаться при клике
+                </div>
+            </div>
+            <div class="qa_question">
+                <p>Как происходит оплата?</p>
+                <button onclick="toggle_answer(4)" id="qa_question__btn_4" class="qa_question_button">+</button>
+                <div id="qa_questions_4" class="qa__question_answer">
+                    Какой-то очень интересный текст для проверки работоспособности этого блока. Я надеюсь, что он будет нормально отображаться при клике
+                </div>
+            </div>
+            <div class="qa_question">
+                <p>Сколько правок можно внести</p>
+                <button onclick="toggle_answer(5)" id="qa_question__btn_5" class="qa_question_button">+</button>
+                <div id="qa_questions_5" class="qa__question_answer">
+                    Какой-то очень интересный текст для проверки работоспособности этого блока. Я надеюсь, что он будет нормально отображаться при клике
+                </div>
+            </div>
+            <div class="qa_question">
+                <p>Работаете со срочными проектами?</p>
+                <button onclick="toggle_answer(6)" id="qa_question__btn_6" class="qa_question_button">+</button>
+                <div id="qa_questions_6" class="qa__question_answer">
+                    Какой-то очень интересный текст для проверки работоспособности этого блока. Я надеюсь, что он будет нормально отображаться при клике
+                </div>
+            </div>
         </div>
     </section>
     <section id="request" class="container request__container">
-        <div class="icon icon_message">
+        <div class="icon request__icon_message">
             <p class="icon__text">💬</p>
         </div>
         <h2>Оставьте заявку</h2>
         <p class="request__text">Я сам напишу вам и сообщу все детали</p>
-        <div class="icon icon_lightning">
+        <div class="icon request__icon_lightning">
             <p class="icon__text">⚡️</p>
         </div>
-        <div class="icon icon_programmer">
+        <div class="icon request__icon_programmer icon_programmer">
             <p class="icon__text">👩🏼‍💻</p>
         </div>
         <form class="request__form">
             <input type="text" name="name" placeholder="Имя" class="request__form__input"/>
             <input type="email" name="email" placeholder="Почта" class="request__form__input"/>
             <select name="service" placeholder="Услуга" class="request__form__select">
-                <option value="default">Услуга ▿</option>
+                <option value="default" selected data-default>Услуга ▿</option>
                 <option value="tilda">Сайты на Тильде</option>
                 <option value="web">Веб-дизайн</option>
                 <option value="code">Программный код</option>
@@ -157,5 +223,39 @@
             <button name="submit" type="submit" class="request__form__button">Отправить сообщение</button>
         </form>
     </section>
+    <script>
+        function toggle_cost(){
+            console.log("here");
+            console.log(document.getElementById("cost__answer").classList);
+            document.getElementById("cost__answer").classList.toggle("cost__answer_visible");
+        }
+
+        function toggle_answer(n){
+            var id = String("qa_questions_" + n);
+            console.log(id);
+            document.getElementById(id).classList.toggle("qa__question_answer_visible");
+            if (document.getElementById(id).classList.contains('qa__question_answer_visible')){
+                console.log(String('qa_question__btn_' + n));
+                document.getElementById(String('qa_question__btn_' + n)).textContent = "✖️";
+            }
+            else{
+                console.log(String('qa_question__btn_' + n));
+                document.getElementById(String('qa_question__btn_' + n)).textContent = "+";
+            }
+        }
+
+        // window.onclick = function(event) {
+        //     if (!event.target.matches('.qa_question')) {
+        //         var dropdowns = document.getElementsByClassName("qa__question_answer");
+        //         var i;
+        //         for (i = 0; i < dropdowns.length; i++) {
+        //         var openDropdown = dropdowns[i];
+        //         if (openDropdown.classList.contains('qa__question_answer_visible')) {
+        //             openDropdown.classList.remove('qa__question_answer_visible');
+        //             }
+        //         }
+        //     }
+        // }
+    </script>
 </body>
 </html>

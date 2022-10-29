@@ -317,11 +317,124 @@ h2{
     margin-top: 0;
 }
 
-.count_cost__container{
-    margin: 120px auto;
-    height: 1131px;
+.cost__form{
+    margin: 80px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 40px 24px;
+    width: 400px;
+    border: 1px solid #CCCCCC;
+    border-radius: 16px;
+    font-weight: 500;
+    height: 288px;
+}
+.cost__form__select{
+    -webkit-appearance: none;
+    width: 384px;
+    height: 48px;
+    background: #FFFFFF;
+    border: 1px solid #DBDBDB;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    padding-left: 12px;
+    margin:0;
 }
 
+.cost__form label{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #181818;
+    border: none;
+}
+
+.count_cost__input_checkbox{
+    width: 16px;
+    height: 20px;
+    margin-right: 16px;
+    
+}
+.cost__form__button{
+    width: 384px;
+    height: 56px;
+    border: 2px solid #181818;
+    border-radius: 8px;
+    background-color: white;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #181818;
+}
+.count_cost__container{
+    margin: 120px auto;
+    /* height: 888px; */
+}
+.cost__answer{
+    display: none;
+}
+
+.cost__answer_visible{
+    margin: 0 auto;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px 24px;
+    width: 400px;
+    height: 384px;
+    background: #FFFFFF;
+border: 1px solid #CCCCCC;
+border-radius: 0px 0px 16px 16px;
+}
+
+.cost__answer_title{
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 64px;
+    /* identical to box height, or 200% */
+    /* text-align: center;
+    width: 100%; */
+    letter-spacing: -0.02em;
+    margin: 0;
+    color: #181818;
+}
+
+.cost__answer_text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #181818;
+    margin: 24px 0 0 0;
+}
+
+.cost__answer_price{
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #181818;
+    margin: 0;
+}
+
+.cost__answer__button{
+    width: 336px;
+    margin-top: 40px;
+    height: 56px;
+    background-color: #181818;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    font-weight: 600;
+font-size: 16px;
+line-height: 24px;
+    text-align: center;
+}
 .qa__container{
     width: 100%;
     background-color: #000000;
@@ -335,15 +448,62 @@ h2{
     padding-bottom: 100px;
 }
 .qa_question{
-    /* height: 56px; */
-    /* width: 1160px; */
+    position: relative;
     background-color: white;
     color: black;
     border: 1px solid #CCCCCC;
-    padding: 32px 40px;
+    padding: 31px 40px;
     border-radius: 16px;  
     margin-bottom: 16px; 
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
+
+.qa_question_button{
+    font-size: 24px;
+    height: 24px;
+    line-height: 24px;
+    width: 24px;
+    font-weight: 600px;
+    vertical-align: middle;
+    text-align: center;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.qa_question_button:hover, .qa_question_button:focus {
+    background-color: #909090;
+}
+
+.qa__question_answer{
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    z-index: 1000;
+    background-color: #fff;
+    color: black;
+    width: 100%;
+}
+.qa__question_answer_visible{
+    display: block;
+    /* height: 100px; */
+    color: black;
+    padding: 10px 31px;
+    margin-top: -10px;
+    width: calc(100% - 62px);
+}
+
+.qa_question p{
+    line-height: 24px;
+    margin: 0;
+}
+
 .qa__container h2{
     color: #fff;
     text-align: center;
@@ -403,6 +563,7 @@ h2{
 height: 160px;
 padding-top: 12px;
 }
+
 .request__form__button{
     color: white;
     background-color: black;
@@ -411,4 +572,43 @@ padding-top: 12px;
     margin-top: 32px;
     padding:0;
     text-align: center;
+}
+
+.request__icon_lightning{
+    width: 100px;
+    height: 100px;
+    left: 111px;
+    top:100px
+}
+
+.request__icon_lightning p{
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 40px;
+    margin-top: 34px;
+    margin-left: 30px;
+}
+
+.request__icon_message{
+    left: 250px;
+    top: 752px;
+    width: 140px;
+    height: 140px;
+}
+.request__icon_message p{
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 24px;
+    margin: 58px 42px;
+}
+
+.request__icon_programmer{
+    top: 516px;
+    right: 18px;
+    width: 170px;
+    height: 170px;
+}
+
+select option[data-default]{
+    color: rgb(120, 120, 120);
 }
